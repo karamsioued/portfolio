@@ -1,0 +1,775 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Karam Sioued — مصوّر فيديو</title>
+<meta name="description" content="Karam Sioued، مصوّر فيديو ومونتير وطيّار درون مقيم في الدوحة. أعماله في العقارات والسيارات والإعلانات والتصوير الجوي والتغطيات الصحفية.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=IBM+Plex+Mono:wght@400;500&family=Zain:wght@300;400;700;800&display=swap">
+<style>
+/* Near-black ground, ivory type, Qatar-maroon accent; anything sitting on a photo or a maroon
+   block uses the --on-dark pair.
+   Layout: a viewfinder hero, a portrait introduction, then justified film-strip rows
+   of work that open in a screening-room lightbox; career and kit follow as plain ledgers. */
+:root{
+  color-scheme:dark;
+  --ink:#0d0a0b;
+  --surface:#171112;
+  --raised:#211819;
+  --ivory:#efe7da;
+  --on-dark:#f3efe8;
+  --sand-light:#d9c29a;
+  --muted:#a2958a;
+  --line:rgba(239,231,218,.14);
+  --maroon:#8a1538;
+  --maroon-deep:#5d0d25;
+  --sand:#cdb38a;
+  --rec:#e2414f;
+  --display:"Bodoni Moda","Didot","Times New Roman",serif;
+  --ar-display:"Zain","Geeza Pro",Tahoma,sans-serif;
+  --body:"Zain","Geeza Pro",Tahoma,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --gutter:clamp(16px,4vw,56px);
+  --rh:320px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--ivory);font:400 19px/1.7 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--sand);outline-offset:3px}
+h1,h2,h3,p{margin:0}
+h2,h3{text-wrap:balance}
+.wrap{padding-inline:var(--gutter);max-width:1500px;margin-inline:auto}
+.mono{font-family:var(--mono);direction:ltr;unicode-bidi:isolate;letter-spacing:.08em;font-size:12px;text-transform:uppercase}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:20;background:rgba(13,10,11,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.brand{font-family:var(--display);font-size:22px;letter-spacing:.34em;direction:ltr}
+.nav nav{display:flex;gap:clamp(14px,2.4vw,34px);font-size:17px;color:var(--muted);overflow-x:auto;scrollbar-width:none;white-space:nowrap}
+.nav nav::-webkit-scrollbar{display:none}
+.nav nav a:hover{color:var(--ivory)}
+.nav nav a.cta{color:var(--sand)}
+
+/* ---------- hero ---------- */
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(24px,5vw,80px);align-items:center;padding-block:clamp(36px,6vw,84px)}
+.hero-copy{display:flex;flex-direction:column;gap:22px;min-width:0}
+.eyebrow{color:var(--sand);display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--sand)}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(64px,12.5vw,190px);line-height:.86;letter-spacing:.02em;direction:ltr;text-align:right}
+.hero h1 span{display:block;font-family:var(--ar-display);font-weight:500;font-size:clamp(20px,2.5vw,34px);line-height:1.5;letter-spacing:0;direction:rtl;margin-top:18px;color:var(--ivory)}
+.lede{max-width:34em;color:var(--muted);font-weight:300;font-size:clamp(18px,1.45vw,22px)}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 26px;border:1px solid var(--line);font-size:18px;transition:background .25s,border-color .25s,color .25s}
+.btn.primary{background:var(--maroon);border-color:var(--maroon)}
+.btn.primary:hover{background:#a11b44;border-color:#a11b44}
+.btn:not(.primary):hover{border-color:var(--sand);color:var(--sand)}
+.facts{display:flex;flex-wrap:wrap;gap:clamp(20px,3.4vw,48px);padding-top:22px;border-top:1px solid var(--line)}
+.facts div{display:flex;flex-direction:column}
+.facts b{font-family:var(--display);font-weight:400;font-size:clamp(30px,3.4vw,46px);line-height:1.1;direction:ltr;text-align:right;font-variant-numeric:tabular-nums}
+.facts span{font-size:16px;color:var(--muted)}
+
+.monitors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(8px,1.2vw,16px);align-items:center;direction:ltr}
+.monitor{position:relative;aspect-ratio:9/16;background:var(--surface);overflow:hidden}
+.monitor:nth-child(2){transform:translateY(-7%)}
+.monitor:nth-child(1),.monitor:nth-child(3){transform:translateY(7%)}
+.monitor video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.monitor::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,10,11,.5),transparent 24%,transparent 70%,rgba(13,10,11,.75));pointer-events:none}
+.hud{position:absolute;inset:10px;z-index:2;pointer-events:none;display:flex;flex-direction:column;justify-content:space-between;font-size:10px}
+.hud i{position:absolute;width:14px;height:14px;border:1px solid var(--ivory);opacity:.8}
+.hud i:nth-of-type(1){top:0;left:0;border-right:0;border-bottom:0}
+.hud i:nth-of-type(2){top:0;right:0;border-left:0;border-bottom:0}
+.hud i:nth-of-type(3){bottom:0;left:0;border-right:0;border-top:0}
+.hud i:nth-of-type(4){bottom:0;right:0;border-left:0;border-top:0}
+.hud .row{display:flex;justify-content:space-between;padding:8px 10px}
+.rec{display:inline-flex;align-items:center;gap:6px}
+.rec::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--rec);animation:blink 1.2s steps(2) infinite}
+@keyframes blink{50%{opacity:.15}}
+
+/* ---------- sections ---------- */
+.section{padding-block:clamp(40px,5vw,72px)}
+.head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:18px;margin-bottom:26px}
+.head h2{font-family:var(--ar-display);font-weight:700;font-size:clamp(30px,4vw,54px);line-height:1.25}
+.head p{color:var(--muted);font-weight:300;max-width:34em}
+.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px;margin-bottom:22px;border-bottom:1px solid var(--line)}
+.tabs::-webkit-scrollbar{display:none}
+.tab{white-space:nowrap;padding:12px 18px;color:var(--muted);font-size:18px;border-bottom:2px solid transparent;margin-bottom:-1px;display:inline-flex;gap:8px;align-items:baseline;transition:color .2s}
+.tab small{font-family:var(--mono);font-size:11px;opacity:.7}
+.tab:hover{color:var(--ivory)}
+.tab[aria-selected="true"]{color:var(--ivory);border-bottom-color:var(--maroon)}
+
+/* justified film-strip rows */
+.reel{display:flex;flex-wrap:wrap;gap:8px}
+.reel::after{content:"";flex:1000 1 0}
+.card{position:relative;height:var(--rh);flex:var(--r) 1 calc(var(--rh) * var(--r));min-width:0;background:var(--surface);overflow:hidden;text-align:start;display:block;padding:0}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1),opacity .4s;opacity:.92}
+.card.noimg img{display:none}
+.card.noimg{background:linear-gradient(160deg,var(--raised),var(--surface))}
+.card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(13,10,11,.9));pointer-events:none}
+.card .meta{position:absolute;inset-inline:0;bottom:0;z-index:2;padding:14px;display:flex;flex-direction:column;gap:2px}
+.card .meta span{color:var(--sand);font-size:10px}
+.card .meta b{font-weight:500;font-size:18px;line-height:1.45;overflow-wrap:anywhere}
+.card .play{position:absolute;top:12px;inset-inline-start:12px;z-index:2;width:34px;height:34px;border:1px solid rgba(239,231,218,.55);border-radius:50%;display:grid;place-items:center;background:rgba(13,10,11,.35);transition:background .25s,border-color .25s}
+.card .play svg{width:11px;height:11px;fill:var(--ivory);margin-inline-start:2px}
+.card:hover img,.card:focus-visible img{transform:scale(1.06);opacity:1}
+.card:hover .play,.card:focus-visible .play{background:var(--maroon);border-color:var(--maroon)}
+.empty{color:var(--muted);padding:40px 0}
+
+/* ---------- me ---------- */
+.me{border-top:1px solid var(--line)}
+.me-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,5vw,80px);align-items:center}
+.portrait{margin:0;position:relative;aspect-ratio:4/5;background:linear-gradient(160deg,var(--raised),var(--surface));max-width:460px;width:100%}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.portrait.empty::before{content:"صورتك هنا";position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-family:var(--ar-display);font-size:22px}
+.portrait::after{content:"";position:absolute;inset:12px;border:1px solid rgba(239,231,218,.28);pointer-events:none}
+.portrait figcaption{position:absolute;bottom:22px;inset-inline:24px;z-index:2;font-size:10px;color:var(--ivory);text-align:left}
+.me-copy{display:flex;flex-direction:column;gap:18px;min-width:0}
+.me-copy h2{font-family:var(--ar-display);font-weight:700;font-size:clamp(32px,4.6vw,64px);line-height:1.3}
+.me-copy p{color:var(--muted);font-weight:300;font-size:clamp(18px,1.45vw,22px);max-width:36em}
+.work{border-top:1px solid var(--line)}
+/* ---------- gear ---------- */
+.gear{border-top:1px solid var(--line)}
+.gear-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(20px,3vw,48px)}
+.gear-col h3{font-family:var(--ar-display);font-weight:700;font-size:24px;display:flex;flex-direction:column;gap:2px;padding-bottom:14px;border-bottom:1px solid var(--maroon)}
+.gear-col h3 .mono{color:var(--sand);font-size:11px}
+.gear-col ul{list-style:none;margin:0;padding:0}
+.gear-col li{display:flex;flex-direction:column;padding:16px 0;border-bottom:1px solid var(--line)}
+.gear-col li b{font-family:var(--display);font-weight:400;font-size:24px;letter-spacing:.02em;text-align:right;line-height:1.4}
+.gear-col li b:not([dir]){font-family:var(--ar-display);font-weight:500;font-size:21px}
+.gear-col li span{color:var(--muted);font-weight:300;font-size:17px}
+
+/* ---------- hero stage / shots / awards ---------- */
+.stage{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:clamp(8px,1.2vw,16px);align-items:end;direction:ltr}
+.stage figure{margin:0}
+.hero-photo{position:relative;aspect-ratio:3/4;background:var(--surface);overflow:hidden}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+.stage .monitor{transform:translateY(9%)}
+.shots{border-top:1px solid var(--line)}
+.strip{--rh:340px}
+.shot{position:relative;margin:0;height:var(--rh);flex:var(--r) 1 calc(var(--rh) * var(--r));min-width:0;background:var(--surface);overflow:hidden}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.awards{border-top:1px solid var(--line)}
+.award-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.award-grid .award{padding:clamp(24px,3vw,40px)}
+.award-grid .award h3{font-size:clamp(24px,2.4vw,32px)}
+
+/* ---------- about ---------- */
+.ln{font-family:var(--display);letter-spacing:.04em}
+.about{border-top:1px solid var(--line)}
+.about-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:start}
+.cv{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.cv li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
+.cv .mono{color:var(--sand);font-size:11px;padding-top:8px;text-align:right}
+.cv h3{font-family:var(--ar-display);font-weight:700;font-size:21px;line-height:1.5}
+.cv p{color:var(--muted);font-weight:300;font-size:18px}
+.cv .clients{font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-align:right;color:var(--ivory);opacity:.85}
+.side{display:flex;flex-direction:column;gap:14px}
+.award{background:var(--maroon-deep);padding:24px;display:flex;flex-direction:column;gap:6px}
+.award .mono{color:var(--sand);font-size:11px}
+.award h3{font-family:var(--ar-display);font-weight:700;font-size:22px;line-height:1.45}
+.award p{font-weight:300;font-size:18px;color:rgba(239,231,218,.86)}
+.kit{margin:8px 0 0;border-top:1px solid var(--line)}
+.kit div{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--line);font-size:17px}
+.kit dt{color:var(--muted);flex:none}
+.kit dd{margin:0;text-align:left}
+
+/* ---------- contact ---------- */
+.contact{background:var(--surface);border-top:1px solid var(--line)}
+.contact .wrap{padding-block:clamp(48px,7vw,104px);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:center}
+.contact h2{font-family:var(--ar-display);font-weight:700;font-size:clamp(34px,5.4vw,78px);line-height:1.2}
+.contact p{color:var(--muted);font-weight:300;margin-top:14px;max-width:30em}
+.channels{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.channels a,.channels div{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 2px;border-bottom:1px solid var(--line)}
+.channels a:hover{color:var(--sand)}
+.channels span{color:var(--muted);font-size:17px}
+.channels b{font-weight:400;direction:ltr;unicode-bidi:isolate;overflow-wrap:anywhere;text-align:left}
+.channels .todo b{color:var(--muted);font-style:italic;direction:rtl}
+footer{border-top:1px solid var(--line)}
+footer .wrap{padding-block:22px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;color:var(--muted);font-size:16px}
+
+/* ---------- lightbox ---------- */
+.lb{position:fixed;inset:0;z-index:50;background:rgba(8,6,7,.96);display:flex;flex-direction:column;padding:14px var(--gutter) 20px}
+.lb[hidden]{display:none}
+.lb-top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-bottom:12px}
+.lb-top b{font-weight:500;font-size:16px;overflow-wrap:anywhere}
+.lb-top span{color:var(--sand);display:block}
+.lb-actions{display:flex;gap:10px;flex:none}
+.lb-actions a,.lb-actions button{border:1px solid var(--line);padding:9px 16px;font-size:17px;white-space:nowrap}
+.lb-actions a:hover,.lb-actions button:hover{border-color:var(--sand);color:var(--sand)}
+.lb-stage{flex:1;min-height:0;display:grid;place-items:center}
+.lb-frame{background:#000;max-width:100%;max-height:100%;height:100%;aspect-ratio:16/9}
+.lb-frame.v{aspect-ratio:9/16}
+.lb-frame iframe,.lb-frame img{width:100%;height:100%;border:0;display:block;object-fit:contain}
+
+/* ---------- surfaces that stay dark: text on photos, maroon blocks, the screening room ---------- */
+.btn.primary,.hud,.card,.portrait figcaption,.award,.lb{color:var(--on-dark)}
+.hud i{border-color:var(--on-dark)}
+.card .meta span,.award .mono,.lb-top span{color:var(--sand-light)}
+.card .play svg{fill:var(--on-dark)}
+.award p{color:rgba(243,239,232,.88)}
+.lb-actions a,.lb-actions button{border-color:rgba(243,239,232,.28)}
+.lb-actions a:hover,.lb-actions button:hover{border-color:var(--sand-light);color:var(--sand-light)}
+.contact{background:var(--surface)}
+
+/* ---------- hero photo (square studio portrait) ---------- */
+.stage{grid-template-columns:minmax(0,1.78fr) minmax(0,1fr);align-items:center}
+.hero-photo{aspect-ratio:1/1}
+.hero-photo img{object-position:50% 40%}
+.stage .monitor{transform:none}
+.portrait img{object-position:50% 20%}
+
+/* ---------- showreel in the hero ---------- */
+.stage{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}
+.showreel .hud{bottom:64px}
+.sound{position:absolute;z-index:3;inset-inline:14px;bottom:14px;height:42px;display:flex;align-items:center;justify-content:center;gap:10px;background:rgba(13,10,11,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(243,239,232,.3);color:var(--on-dark);font-size:16px;transition:background .2s,border-color .2s}
+.sound:hover{background:var(--maroon);border-color:var(--maroon)}
+.sound svg{width:16px;height:16px;fill:currentColor;flex:none}
+
+/* ---------- language switch ---------- */
+.nav .wrap{gap:12px}
+.nav nav{margin-inline-start:auto}
+.lang{flex:none;border:1px solid var(--line);min-width:44px;height:36px;padding:0 12px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;transition:border-color .2s,color .2s}
+.lang:hover{border-color:var(--sand);color:var(--sand)}
+html[dir="ltr"] .hero h1{text-align:left}
+html[dir="ltr"] .hero h1 span{direction:ltr}
+html[dir="ltr"] .gear-col li b{text-align:left}
+html[dir="ltr"] .kit dd,html[dir="ltr"] .channels b{text-align:right}
+html[dir="ltr"] .portrait figcaption{text-align:right}
+html[lang="en"]{--ar-display:var(--display)}
+html[lang="en"] h2,html[lang="en"] h3,html[lang="en"] .hero h1 span{font-weight:500;letter-spacing:.01em}
+
+@media (max-width:860px){
+  :root{--rh:230px}
+  .hero .wrap,.contact .wrap,.about-grid,.me-grid{grid-template-columns:minmax(0,1fr)}
+  .cv li{grid-template-columns:minmax(0,1fr);gap:4px}
+  .cv .mono{padding-top:0}
+  .hero h1{text-align:right}
+  .monitors,.stage{max-width:520px;margin-inline:auto;width:100%}
+  .strip{--rh:230px}
+  .hud .row:last-child span:first-child{display:none}
+  .hud .row:last-child{justify-content:flex-end}
+  .nav nav a:not(.cta):nth-child(n+3){display:none}
+}
+@media (max-width:480px){
+  :root{--rh:190px}
+  .brand{font-size:18px;letter-spacing:.26em}
+  .card .meta{padding:10px}
+  .card .meta b{font-size:16px}
+  .lb-actions a{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rec::before{animation:none}
+  .card img{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="KARAM">KARAM</a>
+    <nav aria-label="أقسام الموقع">
+      <a href="#me">عنّي</a>
+      <a href="#work">الأعمال</a>
+      <a href="#awards">الجوائز</a>
+      <a href="#gear">العتاد</a>
+      <a href="#stills">صور وتصاميم</a>
+      <a class="cta" href="#contact">تواصل</a>
+    </nav>
+    <button class="lang" id="lang" type="button" aria-label="Switch to English">EN</button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <div class="eyebrow mono">Creative Videographer · Doha, Qatar</div>
+        <h1>KARAM<span><bdi class="ln">Karam Sioued</bdi> — مصوّر فيديو إبداعي</span></h1>
+        <p class="lede">مصوّر ومونتير وطيّار درون. أصوّر العقارات والسيارات والإعلانات والبرامج والتغطيات الصحفية، من أول لقطة إلى الملف النهائي، بين الجزائر وقطر.</p>
+        <div class="actions">
+          <a class="btn primary" href="#work">شاهد الأعمال</a>
+          <a class="btn" href="#me">تعرّف عليّ</a>
+        </div>
+      </div>
+
+      <div class="stage">
+        <figure class="hero-photo">
+          <img src="media/k7.jpg" alt="كرم في الاستوديو وخلفه كاميرات وإضاءة">
+          <div class="hud mono"><i></i><i></i><i></i><i></i></div>
+        </figure>
+        <figure class="monitor showreel">
+          <video id="showreel" src="media/showreel.mp4" poster="media/showreel.jpg" muted loop playsinline autoplay preload="auto"></video>
+          <div class="hud mono"><i></i><i></i><i></i><i></i><div class="row"><span class="rec">REC</span><span>Showreel</span></div><div class="row"><span></span><span class="tc">00:00:00:00</span></div></div>
+          <button class="sound" id="sound" type="button"></button>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+<section class="section me" id="me">
+  <div class="wrap me-grid">
+    <figure class="portrait">
+      <img src="media/k2.jpg" alt="Karam Sioued" id="portrait-img">
+      <figcaption class="mono">Karam Sioued · Doha</figcaption>
+    </figure>
+    <div class="me-copy">
+      <span class="eyebrow mono">About</span>
+      <h2>أنا كرم، أحكي بالكاميرا.</h2>
+      <p>مصوّر فيديو ومونتير وطيّار درون، مقيم في الدوحة. بدأت من ورقلة في الجزائر بتغطية نشاطات الولاية، ثم انتقلت إلى قطر حيث أصوّر السيارات والعقارات والإعلانات.</p>
+      <p>أتولّى العمل كاملاً: التصوير، الإضاءة، المونتاج، التلوين، والتصميم عند الحاجة. أحب اللقطة الهادئة والحركة الناعمة، وأن يُفهم المكان أو المنتج من أول ثانية.</p>
+      <dl class="kit">
+        <div><dt>التخصص</dt><dd>تصوير، مونتاج، تلوين، درون</dd></div>
+        <div><dt>الدراسة</dt><dd>ماستر تسويق الخدمات، جامعة قاصدي مرباح، 2022</dd></div>
+        <div><dt>اللغات</dt><dd>العربية · الإنجليزية · الفرنسية</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="section shots" id="shots">
+  <div class="wrap">
+    <div class="head">
+      <h2>خلف الكاميرا</h2>
+      <p>في مواقع التصوير، بين الجزائر وقطر.</p>
+    </div>
+    <div class="reel strip">
+      <figure class="shot" style="--r:.667"><img loading="lazy" src="media/k9.jpg" alt="كرم يحمل الكاميرا على الجيمبال"></figure>
+      <figure class="shot" style="--r:1.333"><img loading="lazy" src="media/k1.jpg" alt="كرم يصوّر بعدسة 70-200 في الطبيعة"></figure>
+      <figure class="shot" style="--r:.76"><img loading="lazy" src="media/k5.jpg" alt="كرم مع كاميرا FX على الجيمبال في تغطية ليلية"></figure>
+      <figure class="shot" style="--r:1"><img loading="lazy" src="media/k6.jpg" alt="كرم يراجع اللقطة على الجيمبال"></figure>
+      <figure class="shot" style="--r:.586"><img loading="lazy" src="media/k3.jpg" alt="كرم في موقع تصوير خارجي"></figure>
+      <figure class="shot" style="--r:1.333"><img loading="lazy" src="media/k4.jpg" alt="كرم يصوّر في حقل أخضر"></figure>
+      <figure class="shot" style="--r:.75"><img loading="lazy" src="media/k8.jpg" alt="كرم في حقل عبّاد الشمس مع الكاميرا"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section work" id="work">
+  <div class="wrap">
+    <div class="head">
+      <h2>الأعمال</h2>
+      <p>مجموعة مختارة من أعمالي. اضغط على أي عمل لمشاهدته.</p>
+    </div>
+    <div class="tabs" role="tablist" id="work-tabs" aria-label="أنواع الأعمال"></div>
+    <div class="reel" id="work-reel"></div>
+  </div>
+</section>
+
+<section class="section awards" id="awards">
+  <div class="wrap">
+    <div class="head">
+      <h2>جوائز وإنجازات</h2>
+    </div>
+    <div class="award-grid">
+      <article class="award"><span class="mono">Award</span><h3>جائزة رئاسية في الجزائر</h3><p>عن مشروع استخدمتُ فيه الدرون لمسح المحاصيل الزراعية.</p></article>
+      <article class="award"><span class="mono">Press</span><h3>فيديو وصل إلى القنوات العالمية</h3><p>فيديو من إنتاجي انتشر وتناقلته قنوات مثل العربي و BBC وروسيا اليوم، وذُكر في خطاب رسمي لرئيس الجمهورية.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section gear" id="gear">
+  <div class="wrap">
+    <div class="head">
+      <h2>العتاد</h2>
+      <p>ما أحمله إلى موقع التصوير.</p>
+    </div>
+    <div class="gear-grid">
+      <div class="gear-col">
+        <h3><span class="mono">Cameras</span>الكاميرات</h3>
+        <ul>
+          <li><b dir="ltr">Sony FX3</b><span>الكاميرا الرئيسية، فل فريم سينمائية</span></li>
+          <li><b dir="ltr">Sony FX30</b><span>الكاميرا الثانية للقاءات واللقطات المتعددة</span></li>
+          <li><b dir="ltr">Sony A7R II</b><span>للصور الفوتوغرافية</span></li>
+          <li><b dir="ltr">Insta360</b><span>لقطات 360 والزوايا الضيقة</span></li>
+        </ul>
+      </div>
+      <div class="gear-col">
+        <h3><span class="mono">Lenses · G Master</span>العدسات</h3>
+        <ul>
+          <li><b dir="ltr">24-70mm f/2.8 GM</b><span>العدسة اليومية لكل شيء</span></li>
+          <li><b dir="ltr">70-200mm f/2.8 GM</b><span>للتفاصيل والتغطيات من بعيد</span></li>
+          <li><b dir="ltr">85mm f/1.4 GM</b><span>للبورتريه واللقاءات</span></li>
+        </ul>
+      </div>
+      <div class="gear-col">
+        <h3><span class="mono">Support</span>الحركة والمساندة</h3>
+        <ul>
+          <li><b dir="ltr">DJI Ronin-S</b><span>جيمبال للحركة الناعمة</span></li>
+          <li><b>درون</b><span>للتصوير الجوي</span></li>
+          <li><b>إكسسوارات</b><span>ملحقات مساندة للتصوير حسب كل موقع</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="section" id="stills">
+    <div class="wrap">
+      <div class="head">
+        <h2>صور وتصاميم</h2>
+        <p>فوتوغراف من الأرض والجو، وتصاميم لمنشورات المناسبات والحملات.</p>
+      </div>
+      <div class="tabs" role="tablist" id="stills-tabs" aria-label="الصور والتصاميم"></div>
+      <div class="reel" id="stills-reel"></div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div>
+        <h2>للتواصل</h2>
+        <p>يسعدني التعارف والحديث عن الصورة والتصوير.</p>
+      </div>
+      <div class="channels" id="channels"></div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span class="mono">Karam Sioued · Creative Videographer</span><span>الدوحة، قطر</span></div></footer>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-labelledby="lb-title">
+  <div class="lb-top">
+    <div><span class="mono" id="lb-cat"></span><b id="lb-title"></b></div>
+    <div class="lb-actions"><a id="lb-open" target="_blank" rel="noopener">فتح في Drive</a><button type="button" id="lb-close">إغلاق ✕</button></div>
+  </div>
+  <div class="lb-stage"><div class="lb-frame" id="lb-frame"></div></div>
+</div>
+
+<script>
+/* ============ بيانات التواصل — عدّلها هنا ============ */
+const CONTACT = {
+  whatsapp: "97471217030",   // مثال: "97455512345" (بدون + أو مسافات)
+  instagram: "karam_iph",  // مثال: "karam.films"
+  email: "karamsioued0@gmail.com"       // مثال: "name@example.com"
+};
+
+/* ============ الأعمال: [معرّف ملف Drive, العنوان, v عمودي / h أفقي] ============ */
+const QATAR = [
+  { key:"realestate", ar:"عقارات", en:"Real Estate", items:[
+    ["1pAedRztrxnwB2aeBqt6D8U-669BfALFC","IN Real Estate — الأبراج","v"],
+    ["1iLfM647ZjGpW8J-T-XNL6_Uv4oqhFldB","IN Real Estate — الريل النهائي","v"],
+    ["1VlSIz3SU1KBCLhKQDDKiVZmnrk61Tm9o","IN Real Estate — جولة في الشقة","v"],
+    ["1FuCR5OB4pQdH4r9mPViGcxwuBiAMPXC-","Bin Al Sheikh","v"]
+  ]},
+  { key:"cars", ar:"سيارات", en:"Automotive", items:[
+    ["1z9uIQF-JkjO4k21Yv3QQTaLSBm5sfX1h","Lexus","v"],
+    ["1Q2TGOdLp5TWfXugcxGL-q-QrC4NGIrnF","Lexus — 3","v"],
+    ["1kcvaOXRj9nQ2lXwb3Fpjmz82Egr0VZZw","Range Rover Black","v"],
+    ["1PlDoSKvlNiNXvd0u_Re36Mjo39IBW1JX","Ferrari","v"],
+    ["19iHwnhMERW99CxZ-W_a4P_gVsBFFokhn","Corvette","v"],
+    ["1NzGwn7aKnrmgkZMRyBrR9T1ICx-JkFEL","BYD Denza","v"],
+    ["1eJyM_KRyhVEG5Jo0lZ3RpC1fDahDRxap","BYD L5 Matte","v"],
+    ["1QxZg40YAfS5UItrktvX4bUlzmSIpDFBM","Leopard 5","v"],
+    ["1Tm7A-btSoBeCREIzhNw-mqfL_8YZaVXK","H9","v"],
+    ["1NFmOlT57M06Y9zRHNf1fdeZ0ISql04Bj","Tank 700 — المعتمد للسيارات","v"],
+    ["1qYUOSaxGeXdpNAxOXPsfxiNKLDO0pkta","Tank 700","v"],
+    ["1APK0Fpy2MgbZLNeNjCpgYavogChX_chA","بورش قديمة","v"],
+    ["19FhuHfhoxa5MgqC2aBw4VC5oEkci5p2J","سيارة كلاسيكية","v"],
+    ["1P6i2iH6CNfDwmadcY4OWwjLvV2dQWoof","Silverado Red","v"],
+    ["1kUuibGfHPkebJCTPG5BeQl0NGzjA2OKC","Moto — Speed Ramp","v"],
+    ["1fEJY3DAB81d8_cAZ2ZPQ1JZytGfCPJh2","Karam VI","v"],
+    ["12-Gpm-IGvZXV8kb14HBcPOJTvHeLsQvW","RAN 1","v"],
+    ["1_7v3M19e4RE9SIDYdUxcau-YI-PpAgwf","Reel Station","v"],
+    ["1r_xZFRaEli8auJKtEQKDx9CI-RgMUPqB","DEF","v"],
+    ["1Cw_phHkBVGwTMjaVMfSu0i8A3-MNOl36","Final","v"],
+    ["1YSXxH1-YMIZLvksLpp6s5QgGlBEhG7m9","تظليل الزجاج","v"],
+    ["1BSFflNskZqh4gYMQuSn4s2jUa6sgd5Tw","AI Ad Video","v"]
+  ]},
+  { key:"ads", ar:"إعلانات", en:"Commercial", items:[
+    ["1YbQrh41HBl2f2veCgNnZtEK9t9XWUDon","Pepsi Ad","v"],
+    ["191jC3bXdpc-5RVJ0wHdNEdSpeaZ-zXev","AYADI","h"],
+    ["14-X_P-MR2BUG9AP5argPsCxz2F6Tet4D","AYADI — النسخة الكاملة","h"],
+    ["1APrgPbrSP3XZ8V4EPBqfQKgepnwQWo76","Al Ahly Bank","h"],
+    ["18T2zFovPry2SY2gGiEkjra1mr_viGHAJ","DR Sent","v"],
+    ["113IzBs3jN97fLL2_JP1L-StDUxOH9u_7","Mantafelx","v"],
+    ["1fhHXUPn6lMgnGKCax3qMqF5yFNap27Zd","Groupe","v"],
+    ["1WuwfcKxQUw1Dx2lrZQHJ8_vfq4vX0Jix","4","v"]
+  ]},
+  { key:"places", ar:"أماكن وفعاليات", en:"Places & Events", items:[
+    ["18hnoy9d6s0L2tQLTPtNo-ibD3DdP4Xeo","سوق واقف 2022","h"],
+    ["1nb6V45ENorK5Y7lbbSB_m84FWhtrFfEX","الميناء القديم","v"],
+    ["1ll2A6RolKpuDWoOhXnRiLIFtrIahd1Vg","Qatar","v"],
+    ["10D02KSiFQ-YKZnLBGovaJY8dNJqpQ69H","DZ Tou","v"],
+    ["1TZopMMMEZS7Yvrdc5LQfA3cCAwZHOuKp","Cosider","h"],
+    ["1sSHHXCy21Y0rsIGNRn1mn3HyjlFsWYis","Birthday","v"]
+  ]},
+  { key:"bts", ar:"كواليس", en:"Behind the Scenes", items:[
+    ["1laFONlVaadywkcLDABPE-Bx7LAERUsoS","BTS — كواليس التصوير","v"]
+  ]}
+];
+
+const ARCHIVE = [
+  { key:"drone", ar:"تصوير جوي", en:"Aerial", items:[
+    ["1Sq_jfyiWB1GkAcFLfewaO4WC4prQmLXU","Drone","h"],
+    ["1n2Epm6pLVDgZNYbDpSn-7tqX1yqLdDo4","شركة البيرق","h"],
+    ["1Ek8yMmGDUGrBB-_79O_G090v3nv4FInx","مشروع 2700 مسكن","h"],
+    ["1Wvqya0miv3UXNzyKFEWXgRuXp-rcrSbY","موسم الحصاد — المنيعة","h"],
+    ["1UeUjWpCoJAYXUHZGo9653DDdQKXCNivg","Global Agri Food","h"],
+    ["1Gfx0sJSYTzDOfHwGZfudRRojJM2G_Ss6","Harvesting Process","h"],
+    ["1C8XdpwGCYDgUKIOurdRLjJaINUA-9vmx","Al Qessar","h"],
+    ["1MwB1CC72wUiiTD5qsEdbk3YfXOVIzUOc","Tour","h"],
+    ["1VTyxcS0lYGBATx-VHJ8AFLtGQEUzoLWO","Wilaya 11","h"],
+    ["1Il8UN-sJPGks3n7O3iGAWyj-crxAPwp6","GG","h"]
+  ]},
+  { key:"press", ar:"تغطيات صحفية", en:"Press Coverage", items:[
+    ["1uO0jRkxRwvixJmRQ1aSkGxOb5Zzk1a0z","وزير التجارة","h"],
+    ["1_znyuja28LqZtmtrYki5OjDAWvl5DkAG","وزير السياحة","h"],
+    ["1vjrLo0IfbN7TpEHwUeM_GRCezBsjFIwJ","وزير الصناعة","h"],
+    ["1W9YjSusYrjwh6NPy8H8_xDBYkaMSVc3d","زيارة وزير السكن ووزير الأشغال العمومية","h"],
+    ["1YapT19agTFuwgBtjSSIx41hx0MzDJnZy","وزير الصيد البحري وسفير كوريا","h"],
+    ["1Sza9swBh4ZwQsVotEpllh1FyTOoMCYng","وزير التربية — انطلاق شهادة البكالوريا","h"],
+    ["1kdcu_OxtDmSo-CSedUBICQS32oW7Mezl","احتفالات ذكرى اندلاع الثورة — برج باجي مختار","h"],
+    ["1z6GFNfaUmghfC-aZY6ZnvDT5Pk2L2bRc","المرصد الوطني","h"],
+    ["1GxlSuRk3Hhs6o9i-0rl57F2P238wH3hG","Hilal Tiil","h"]
+  ]},
+  { key:"ads", ar:"إعلانات", en:"Commercial", items:[
+    ["1jkjtDSbQwJ-T_qsfAwpngDSMNZSXbScw","Bouchra Pâtisserie","h"],
+    ["1NXC8ny1HkClyFErdcfE9MSHJdCryG3zV","Aline","h"],
+    ["1v8KvwLTa-o_Fhh4Dtho5kQz17WGuwiCh","Hadjo","h"],
+    ["1TjWXD3mqbg-GM4Q4NBjR6DxK-MgbDELE","AMNA Healthy","v"],
+    ["1pPk0ki34QKl--HZ2gbVvtFHaHSuyW2Pa","Loca — Ramadan Reel","v"],
+    ["1itm8vLuALKnpTe9nmA3ydxMwRHsVDqZg","Opening a Sweets Shop","v"],
+    ["1JwoozKb_GtWuiURqsQZjB0ouS8TvsuYj","Harvesting Process 2","h"],
+    ["1pi6jwc_iStvgQVmwtA-c6eqtRxQQYHEk","Sheep","h"]
+  ]},
+  { key:"programs", ar:"برامج ولقاءات", en:"Programs & Interviews", items:[
+    ["1f_iN5z4YZUACy3EkqWRaeLC3s4Z-GeE6","معمري زكرياء — الحلقة 14","h"],
+    ["1ypSjZ2D1oBWn0uFZTvbIDON4-o_5RhdR","داوي زيد التركي — الحلقة 22","h"],
+    ["1X9XsnLHCKnRnpqkQpAHnDN__XWtzjaSL","إبراهيم ماكني — الحلقة 04","h"],
+    ["1VoD4nd4Y8PWC6bGVCx4FVRWF7I3Vdpan","إيناس الصائم — 3","h"],
+    ["1BQcZsnO8DlScCdIpQ1Xl5g6ub35uXuee","إيناس الصائم — 02 (4K)","h"],
+    ["1Glg8_lOHdMje1re0z5UwwWw2e0VQzA7d","الحلقة 01","h"],
+    ["16IsvPciCCt1eLnpjNAWFnnCESjU6Dr_6","الكواليس","h"],
+    ["1JVPY1sSoKQi4g1kj9H0Bw4VqofU3BtUX","لقاء — المشاركين","h"],
+    ["1qx68v_485xsWDgPOrjcKS-r0AOepe1Au","لقاء","h"]
+  ]},
+  { key:"reportage", ar:"ريبورتاج", en:"Reportage", items:[
+    ["1r0P4ju1P6EeJ4ECo58mig15mJ2ALc1pv","ريبورتاج 01","h"],
+    ["1KrW_4sQNnI0RhYattu_LPwRvsw7UIDCs","ريبورتاج 11","h"],
+    ["1vK9yStrC4yvyxiGCNKNx8jcQ0K9rzBYW","ريبورتاج","h"]
+  ]},
+  { key:"reels", ar:"ريلز", en:"Reels", items:[
+    ["1VnYeB7Jq7qYutA1IaEe_IN9fD34P2BU_","Ouargla Reel","v"],
+    ["1KI_QoqRzI40TH_PWyDieQj9_mbHucmBd","Ouargla Rain","v"],
+    ["1P73xCvOmtZRnY79trn70Wi35slcU0r6k","Ouargla","v"],
+    ["1NXxUAB7GWQDumrImjVe314Ym0M9ZhjSo","4X4","v"],
+    ["14u7ClIbVx2iQEkm7yUsalFpLtulfldOy","Flamingo","v"],
+    ["1CbIpZXNN7yyH7AVm7jL5xImSGK7d1M04","الذكاء الاصطناعي","v"],
+    ["1GN0hkezYUDDzh_orpO221z19UOA_TiFL","Ads Story","v"],
+    ["1UMXUIGBJv_uxTJOA3hlvwkv_QYXJR702","Makni Reel","v"],
+    ["1LQgBqDDiUzTO9w0w9j0TsGviXMEU-Jl0","GLT","v"],
+    ["1bSyflmGnxT4Ro9OX6mxC_-m9MGPuF1Jr","Reel","v"],
+    ["1ZMLvAvJT9C0ewhAXfsW7ue02L78lgRoa","Reel — C","v"],
+    ["11x77t70PRuCtCBAyuozst85-LOy1k-bU","Reel — CS","v"],
+    ["1kWUUlbK8aRQpBkiEGDePgUy-TLZ4hsja","Reel — OU","v"],
+    ["1r1QiEL3OPfky1humSt1NVIP3pnHqvRe-","Project 7","v"],
+    ["1BCts_t3EV0U4CeEc_ACSNsK9kYbHCShx","Project","v"]
+  ]}
+];
+
+const PHOTO_IDS = "1_sEgUcIK-aIwVd1hdns-V8DqhlNYi7bV 1y9uu0EkEloimdGK2FzxP3RLdFyFjKLHX 15RSNxyb4m05OSH-xrtj4Uwmf4sNN5wj- 13UgYbeVaMFueodkqRESL92jhUfgz58vh 16H4EwTPUe929NsgKM4MCHgSGkzhWcyyt 13Dd31xMDoGUaPh_YQa8majze-rfEgeM9 1RXzlhpTKOwMSa6XrhTVRJjDjj53Ur1NC 10kM8t5wO8gOVnfQlEn7lZ-Dk6oNExE_1 1Id5wVgsI6dWl5mQGTicYKRQy2mQd_Lvy 1ITcCVuwQr3jjkZPW8uoBfaFVjMJDu7PA 17sBfW2RT5L8cXUtu-p_kO-QqfEdTkDcB 1XeM7PjjJk5wd2GwHdR405bW0-UEObrPX 113px9To8IJf53nOQPmW_Z76T54DWrNmF 1KCQL7OQiXL0mFbaHmGztuoaw40ZMr35U 1Jw_ikZevThKL1LFKtQ6Nnf5qFfYexDZ8 1YjFZgA4Se_p3bsQax_CajaXQF9fXp4Cn 1rFm_xMJQnP-RcTZIiIc7hpcgX-BBSrHL 1MdyMeseA3WxrNJkvyEVcIoK5w08zaG2y 1lgr4Plk2YRVr6Gq8NydKxIz85RaCUsRJ 1602-BI-gOVIADLFRO9cdPeazempP_Fw4 1QLFe3VeJci87YdebHeEYLPmAfJ0TLeXB 1mCU0P4TLM1eu5qB9Le-CBKvxm7cE2qFa 10ZqeZYPP6AYcHdw1kRwpIYX76eByAFjX 1A9gu4KSAyYlQk2IdxFiwB24aISQzUdLY 17dNOzAYrXm4p2xQBLIyZhFPxRgxgBDLD 1RxQumaVr6q53LGvYigVeaAwC1AcMnJZQ 1-F-AkQOmKvAr1GdueaPBB306fIFxU_vg".split(" ");
+const DESIGN_IDS = "1O3qNzvG49nfYlyOsmlq-zohbWuy4ElmU 1CtWgpi7REfrnGNkkVGmlp7w0PG1T3Uso 1gsYDXyzSF6QcTWGc0LtDBnjq3D_dbtMf 1Y-ssBL0UM2-k57mT0npPy8E8ctTd3be2 1yLaeeb8W9Zasmi_T9HOqaCYnCaYTC51J 11VRt6viONdAAFrLqzwos1cHwEH_P1XW0 14UQwU4JIsdL-mLqxGKMTdigRf8W3ObzA 1vMg3T0gMLMUjUkgCRlp0yU1DNJxlquC8 1BEBeDNmADsicPyK0bpoRTOKMa03uEDUF 1K8NRrxHUszfbSTMVOwFnFKmK-GSHYT3c 1q2a_9dAW5EDX0N2w_9Nq6xnbU0l9wJtx 1D53jpavkQbzSsZvbaeGaDSlFaUDl5-r2 1Q3myiF-Pcs1YRI3g3QZc_unD_khEMhDk 11ki5aDSmsb1E2tC4-GmuCNAIMXkFQDWC 1ZywS_uTHla0YPcnkpgaIMngDinhfJN2Q 1RlLKrjy6gOlqgNzzragqtAGgYizPVJm- 1rQGeoRvXQuKTeE11TmQVy_fSB9lChhyr 1MnaclyHT2HtPzqiP6kQ_OZJCfNmFm1d_ 1lbfg6zg_-7PyH2fgEqJ_295RrHrhsWp_".split(" ");
+const STILLS = [
+  { key:"photo", ar:"فوتوغراف", en:"Photography", image:true, items:PHOTO_IDS.map(id=>[id,"","h"]) },
+  { key:"design", ar:"تصاميم", en:"Design", image:true, items:DESIGN_IDS.map(id=>[id,"","s"]) }
+];
+
+/* ============ العرض ============ */
+const RATIO = { v:9/16, h:16/9, s:1 };
+const LOCAL_THUMB = { "1iLfM647ZjGpW8J-T-XNL6_Uv4oqhFldB":"media/inreal.jpg" }; // first frame on Drive is black
+const thumb = (id,w) => (w<1000 && LOCAL_THUMB[id]) || `https://drive.google.com/thumbnail?id=${id}&sz=w${w}`;
+const PLAY = '<span class="play" aria-hidden="true"><svg viewBox="0 0 10 12"><path d="M0 0l10 6-10 6z"/></svg></span>';
+const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+let LANG = "ar";
+const RERENDER = [];
+const L = g => LANG === "en" ? g.en : g.ar;
+
+function mount(groups, tabsEl, reelEl){
+  let current = groups[0].key;
+  function draw(){
+    const set = groups.find(g=>g.key===current);
+    reelEl.innerHTML = set.items.map((it,i)=>{
+      const g = it[3] || set, o = it[2];
+      return `<button class="card" type="button" style="--r:${RATIO[o].toFixed(4)}" data-i="${i}" aria-label="${esc(L(g))}">
+        <img loading="lazy" alt="" src="${thumb(it[0], o==="v"?480:800)}">${g.image?"":PLAY}
+        <span class="meta"><span class="mono">${g.en}</span>${it[3] && LANG==="ar" ? `<b>${g.ar}</b>` : ""}</span></button>`;
+    }).join("");
+    reelEl.querySelectorAll("img").forEach(img=>{
+      img.addEventListener("error",()=>img.closest(".card").classList.add("noimg"));
+      img.addEventListener("load",()=>{
+        // correct the card's shape from the real thumbnail
+        const card = img.closest(".card"), r = img.naturalWidth/img.naturalHeight;
+        if(r>0 && Math.abs(r - parseFloat(card.style.getPropertyValue("--r"))) > .25) card.style.setProperty("--r", Math.min(Math.max(r,.5),2).toFixed(4));
+      });
+    });
+    reelEl.onclick = e=>{
+      const card = e.target.closest(".card"); if(!card) return;
+      const it = set.items[+card.dataset.i], g = it[3] || set;
+      const r = parseFloat(card.style.getPropertyValue("--r"));
+      openLB({id:it[0], title:L(g), cat:g.en, image:!!g.image, ratio:r});
+    };
+  }
+  function render(){
+    tabsEl.innerHTML = groups.map(g=>`<button class="tab" role="tab" type="button" data-key="${g.key}" aria-selected="${g.key===current}">${L(g)}</button>`).join("");
+    draw();
+  }
+  tabsEl.onclick = e=>{
+    const t = e.target.closest(".tab"); if(!t) return;
+    current = t.dataset.key;
+    tabsEl.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-selected", b===t));
+    draw();
+  };
+  RERENDER.push(render);
+  render();
+}
+
+/* one works list: the Doha folder leads every category, the older archive follows */
+const from = (arr, key) => arr.find(g => g.key === key);
+const WORKS = [
+  { key:"featured", ar:"مختارات", en:"Selected", items: QATAR.flatMap(g => g.items.map(it => [it[0], it[1], it[2], g])) },
+  from(QATAR, "realestate"),
+  from(QATAR, "cars"),
+  { key:"ads", ar:"إعلانات", en:"Commercial", items:[...from(QATAR,"ads").items, ...from(ARCHIVE,"ads").items] },
+  from(ARCHIVE, "drone"),
+  from(ARCHIVE, "press"),
+  { key:"programs", ar:"برامج ولقاءات", en:"Programs & Interviews", items:[...from(ARCHIVE,"programs").items, ...from(ARCHIVE,"reportage").items] },
+  from(QATAR, "places"),
+  from(ARCHIVE, "reels"),
+  from(QATAR, "bts")
+];
+mount(WORKS, document.getElementById("work-tabs"), document.getElementById("work-reel"));
+mount(STILLS, document.getElementById("stills-tabs"), document.getElementById("stills-reel"));
+
+/* portrait: shows media/karam.jpg when the file exists */
+(function(){ const im = document.getElementById("portrait-img"), fail = () => { im.hidden = true; im.parentElement.classList.add("empty"); };
+  im.addEventListener("error", fail); if(im.complete && !im.naturalWidth) fail(); })();
+
+/* lightbox */
+const lb = document.getElementById("lb"), frame = document.getElementById("lb-frame");
+let lastFocus = null;
+function openLB(w){
+  lastFocus = document.activeElement;
+  document.getElementById("lb-title").textContent = w.title;
+  document.getElementById("lb-cat").textContent = w.cat;
+  document.getElementById("lb-open").href = `https://drive.google.com/file/d/${w.id}/view`;
+  frame.className = "lb-frame" + (w.ratio<1 ? " v" : "");
+  frame.style.aspectRatio = w.image ? String(w.ratio) : "";
+  frame.innerHTML = w.image
+    ? `<img alt="${esc(w.title)}" src="${thumb(w.id,1600)}">`
+    : `<iframe src="https://drive.google.com/file/d/${w.id}/preview" allow="autoplay; fullscreen" allowfullscreen title="${esc(w.title)}"></iframe>`;
+  lb.hidden = false; document.body.style.overflow = "hidden";
+  document.getElementById("lb-close").focus();
+}
+function closeLB(){
+  lb.hidden = true; frame.innerHTML = ""; document.body.style.overflow = "";
+  if(lastFocus) lastFocus.focus();
+}
+document.getElementById("lb-close").onclick = closeLB;
+lb.addEventListener("click", e=>{ if(e.target===lb || e.target.classList.contains("lb-stage")) closeLB(); });
+addEventListener("keydown", e=>{ if(e.key==="Escape" && !lb.hidden) closeLB(); });
+
+/* contact */
+function renderContact(){
+  const t = LANG === "en"
+    ? { wa:"WhatsApp", ig:"Instagram", mail:"Email", loc:"Based in", city:"Doha, Qatar" }
+    : { wa:"واتساب", ig:"إنستغرام", mail:"البريد", loc:"الموقع", city:"الدوحة، قطر" };
+  const row = (label, value, href) => `<a href="${href}" target="_blank" rel="noopener"><span>${label}</span><b>${esc(value)}</b></a>`;
+  const rows = [];
+  if(CONTACT.whatsapp) rows.push(row(t.wa, "+"+CONTACT.whatsapp, "https://wa.me/"+CONTACT.whatsapp));
+  if(CONTACT.instagram) rows.push(row(t.ig, "@"+CONTACT.instagram, "https://instagram.com/"+CONTACT.instagram));
+  if(CONTACT.email) rows.push(row(t.mail, CONTACT.email, "mailto:"+CONTACT.email));
+  rows.push(`<div><span>${t.loc}</span><b style="direction:inherit">${t.city}</b></div>`);
+  document.getElementById("channels").innerHTML = rows.join("");
+}
+RERENDER.push(renderContact);
+renderContact();
+
+/* ============ English text: Arabic sentence on the page → its translation ============ */
+const EN = {
+  "عنّي":"About", "الأعمال":"Work", "الجوائز":"Awards", "العتاد":"Gear", "صور وتصاميم":"Stills & Design", "تواصل":"Contact",
+  "— مصوّر فيديو إبداعي":"— Videographer & Editor",
+  "مصوّر ومونتير وطيّار درون. أصوّر العقارات والسيارات والإعلانات والبرامج والتغطيات الصحفية، من أول لقطة إلى الملف النهائي، بين الجزائر وقطر.":
+    "Videographer, editor and drone pilot. I film real estate, cars, commercials, TV programs and press coverage, from the first shot to the final file, between Algeria and Qatar.",
+  "شاهد الأعمال":"See the work", "تعرّف عليّ":"About me",
+  "أنا كرم، أحكي بالكاميرا.":"I'm Karam. I tell stories with a camera.",
+  "مصوّر فيديو ومونتير وطيّار درون، مقيم في الدوحة. بدأت من ورقلة في الجزائر بتغطية نشاطات الولاية، ثم انتقلت إلى قطر حيث أصوّر السيارات والعقارات والإعلانات.":
+    "Videographer, editor and drone pilot based in Doha. I started in Ouargla, Algeria, covering the Wilaya's events, then moved to Qatar, where I film cars, real estate and commercials.",
+  "أتولّى العمل كاملاً: التصوير، الإضاءة، المونتاج، التلوين، والتصميم عند الحاجة. أحب اللقطة الهادئة والحركة الناعمة، وأن يُفهم المكان أو المنتج من أول ثانية.":
+    "I handle the whole job: shooting, lighting, editing, color grading, and design when needed. I like a calm frame and smooth movement, and a place or product that reads in the first second.",
+  "التخصص":"Focus", "تصوير، مونتاج، تلوين، درون":"Filming, editing, color grading, drone",
+  "الدراسة":"Education", "ماستر تسويق الخدمات، جامعة قاصدي مرباح، 2022":"Master's in Marketing Services, Kasdi Merbah University, 2022",
+  "اللغات":"Languages", "العربية · الإنجليزية · الفرنسية":"Arabic · English · French",
+  "خلف الكاميرا":"Behind the camera", "في مواقع التصوير، بين الجزائر وقطر.":"On location, between Algeria and Qatar.",
+  "مجموعة مختارة من أعمالي. اضغط على أي عمل لمشاهدته.":"A selection of my work. Tap any piece to watch it.",
+  "جوائز وإنجازات":"Awards & achievements",
+  "جائزة رئاسية في الجزائر":"A presidential award in Algeria",
+  "عن مشروع استخدمتُ فيه الدرون لمسح المحاصيل الزراعية.":"For a project where I used drones to survey agricultural crops.",
+  "فيديو وصل إلى القنوات العالمية":"A video that reached global news channels",
+  "فيديو من إنتاجي انتشر وتناقلته قنوات مثل العربي و BBC وروسيا اليوم، وذُكر في خطاب رسمي لرئيس الجمهورية.":
+    "One of my videos went viral, was covered by channels like Al Araby, BBC and Russia Today, and was mentioned by the President in an official speech.",
+  "ما أحمله إلى موقع التصوير.":"What I bring to a shoot.",
+  "الكاميرات":"Cameras", "العدسات":"Lenses", "الحركة والمساندة":"Movement & support",
+  "الكاميرا الرئيسية، فل فريم سينمائية":"Main camera, full-frame cinema",
+  "الكاميرا الثانية للقاءات واللقطات المتعددة":"Second camera for interviews and multi-angle shoots",
+  "للصور الفوتوغرافية":"For stills", "لقطات 360 والزوايا الضيقة":"360 shots and tight spaces",
+  "العدسة اليومية لكل شيء":"The everyday lens", "للتفاصيل والتغطيات من بعيد":"Details and coverage from a distance",
+  "للبورتريه واللقاءات":"Portraits and interviews", "جيمبال للحركة الناعمة":"Gimbal for smooth movement",
+  "درون":"Drone", "للتصوير الجوي":"Aerial filming", "إكسسوارات":"Accessories", "ملحقات مساندة للتصوير حسب كل موقع":"Supporting kit, chosen per location",
+  "فوتوغراف من الأرض والجو، وتصاميم لمنشورات المناسبات والحملات.":"Photography from the ground and the air, and designs for occasions and campaigns.",
+  "للتواصل":"Get in touch", "يسعدني التعارف والحديث عن الصورة والتصوير.":"Happy to connect and talk about images and filmmaking.",
+  "الدوحة، قطر":"Doha, Qatar", "فتح في Drive":"Open in Drive", "إغلاق ✕":"Close ✕"
+};
+function setLang(lang){
+  LANG = lang;
+  const root = document.documentElement;
+  root.lang = lang; root.dir = lang === "en" ? "ltr" : "rtl";
+  document.title = lang === "en" ? "Karam Sioued — Videographer" : "Karam Sioued — مصوّر فيديو";
+  RERENDER.forEach(fn => fn());
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  for(let n; (n = walker.nextNode()); ){
+    if(n.parentElement.closest("script,style")) continue;
+    if(n._ar === undefined) n._ar = n.nodeValue;
+    const key = n._ar.trim();
+    n.nodeValue = (lang === "en" && EN[key]) ? n._ar.replace(key, EN[key]) : n._ar;
+  }
+  const btn = document.getElementById("lang");
+  btn.textContent = lang === "en" ? "عربي" : "EN";
+  btn.setAttribute("aria-label", lang === "en" ? "التحويل إلى العربية" : "Switch to English");
+  try{ localStorage.setItem("lang", lang); }catch(e){}
+}
+document.getElementById("lang").onclick = () => setLang(LANG === "en" ? "ar" : "en");
+try{ if(localStorage.getItem("lang") === "en") setLang("en"); }catch(e){}
+
+/* showreel: real timecode + sound toggle */
+(function(){
+  const v = document.getElementById("showreel"), btn = document.getElementById("sound");
+  const tc = document.querySelector(".showreel .tc"), pad = n => String(n).padStart(2,"0");
+  const ICON_ON = '<svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 4V5L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>';
+  const ICON_OFF = '<svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 4V5L7 9H3zm13.6 3 2.7-2.7-1.4-1.4-2.7 2.7-2.7-2.7-1.4 1.4 2.7 2.7-2.7 2.7 1.4 1.4 2.7-2.7 2.7 2.7 1.4-1.4z"/></svg>';
+  function label(){
+    const en = LANG === "en";
+    btn.innerHTML = v.muted
+      ? ICON_ON + `<span>${en ? "Watch with sound" : "شاهد بالصوت"}</span>`
+      : ICON_OFF + `<span>${en ? "Mute" : "كتم الصوت"}</span>`;
+  }
+  btn.onclick = () => {
+    if(v.muted){ v.muted = false; v.currentTime = 0; v.play().catch(()=>{}); }
+    else v.muted = true;
+    label();
+  };
+  RERENDER.push(label);
+  label();
+  setInterval(() => {
+    const f = Math.floor(v.currentTime * 25);
+    tc.textContent = `00:${pad(Math.floor(f/1500)%60)}:${pad(Math.floor(f/25)%60)}:${pad(f%25)}`;
+  }, 80);
+})();
+</script>
+</body>
+</html>
